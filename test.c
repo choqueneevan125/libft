@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                       :::      ::::::::    */
-/*   main.c                                            :+:      :+:    :+:    */
+/*   test.c                                            :+:      :+:    :+:    */
 /*                                                   +:+ +:+         +:+      */
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/19 13:35:04 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/19 14:22:57 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/10/19 14:42:22 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ int	main(void)
 	printf("Fonction isalpha {res: %d}\n", ft_isprint('a'));
 	printf("Fonction isalpha {res: %d}\n", ft_isprint('{'));
 	printf("Fonction isalpha {res: %d}\n\n", ft_isprint('\n'));
+	printf("Le nombre de charactere dans ce texte 'Hello, World' : %ld charactere\n", ft_strlen("Hello, World"));
 	return (0);
 }
