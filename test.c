@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/19 13:35:04 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/20 10:15:44 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/10/20 12:22:35 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "libft.h"
 #include <ctype.h>
 #include <string.h>
+#include <stdlib.h>
 
 void	test_memcpy(void)
 {
