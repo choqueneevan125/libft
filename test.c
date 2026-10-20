@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/19 13:35:04 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/20 09:38:21 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/10/20 10:15:44 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,15 @@
 #include "libft.h"
 #include <ctype.h>
 #include <string.h>
+
+void	test_memcpy(void)
+{
+	char	dest[sizeof("Hello, World")];
+
+	ft_memcpy(dest, "Hello, World", ft_strlen("Hello, World"));
+	dest[ft_strlen("Hello, World")] = '\0';
+	printf("%s\n", dest);
+}
 
 void	test_memset(void)
 {
@@ -58,5 +67,6 @@ int	main(void)
 	printf("Le nombre de charactere dans ce texte 'Hello, World' : %ld charactere\n", ft_strlen("Hello, World"));
 	test_memset();
 	test_bzero();
+	test_memcpy();
 	return (0);
 }
