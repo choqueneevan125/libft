@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/20 14:55:41 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/20 14:55:41 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/10/20 16:39:06 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -159,5 +159,6 @@ int	main(void)
 	test_memcpy();
 	test_memmove();
 	printf("\n= TOUS LES TESTS ONT RÉUSSI ! ===\n");
+	printf("%d\n", ft_atoi("      \n  -5"));
 	return (0);
 }
