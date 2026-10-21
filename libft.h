@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/19 13:35:22 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/21 10:06:48 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/10/21 11:05:13 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 char	*ft_strdup(const char *s);
 int		ft_atoi(const char *nptr);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
 
 #endif

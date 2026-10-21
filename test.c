@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/20 14:55:41 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/21 10:58:20 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/10/21 12:02:09 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,51 @@
 #include <ctype.h>
 #include <assert.h>
 #include "libft.h"
+
+void	run_test(const void *s, int c, size_t n, const char *test_name);
+
+void	test_1(void)
+{
+	printf("=== DEBUT DES TESTS FT_MEMCHR ===\n\n");
+	// Test 1 : Recherche basique d'un caractère présent
+	char	str1[] = "Hello World!";
+
+	run_test(str1, 'W', 12, "Test 1: Caractere présent");
+	// Test 2 : Caractère absent
+	run_test(str1, 'z', 12, "Test 2: Caractere absent");
+	// Test 3 : Recherche du caractère null `\0`
+	run_test(str1, '\0', 13, "Test 3: Recherche de \\0");
+	// Test 4 : Caractère présent mais au-delà de la taille `n`
+	run_test(str1, 'W', 5, "Test 4: Caractere hors de la limite n");
+	// Test 5 : Recherche dans un tableau d'entiers / octets non-ASCII
+	unsigned char	bytes[] =
+	{
+		0x01, 0x02, 0xFF, 0x04, 0x05
+	};
+	run_test(bytes, 0xFF, 5, "Test 5: Tableau d'octets / 0xFF");
+	// Test 6 : Conversion de int à unsigned char pour le chercheur
+	char	str2[] = "abcde";
+
+	run_test(str2, 'c' + 256, 5, "Test 6: Overflow du paramètre 'c' (int -> unsigned char)");
+	printf("\n=== FIN DES TESTS ===\n");
+}
+
+void	run_test(const void *s, int c, size_t n, const char *test_name)
+{
+	void	*res_ft;
+	void	*res_std;
+
+	res_ft = ft_memchr(s, c, n);
+	res_std = memchr(s, c, n);
+	if (res_ft == res_std)
+		printf("[OK] %s\n", test_name);
+	else
+	{
+		printf("[KO] %s\n", test_name);
+		printf("   -> Attendu : %p\n", res_std);
+		printf("   -> Obtenu  : %p\n", res_ft);
+	}
+}
 
 void	test_memcmp(void)
 {
@@ -166,5 +211,6 @@ int	main(void)
 	printf("\n= TOUS LES TESTS ONT RÉUSSI ! ===\n");
 	printf("%d\n", ft_atoi("      \n  -5"));
 	test_memcmp();
+	test_1();
 	return (0);
 }
