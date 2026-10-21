@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/20 14:55:41 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/21 13:24:42 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/10/21 13:37:03 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,27 @@
 #include "libft.h"
 
 void	run_test(const void *s, int c, size_t n, const char *test_name);
+
+void	test_strchr(void)
+{
+	printf("[TEST] ft_strchr... ");
+	char	*str = "Hello, 42LeHavre!";
+
+	// Test 1 : Recherche d'un caractère présent au milieu
+	assert(ft_strchr(str, 'o') == strchr(str, 'o'));
+	// Test 2 : Recherche du premier caractère
+	assert(ft_strchr(str, 'H') == strchr(str, 'H'));
+	// Test 3 : Recherche du dernier caractère avant le '\0'
+	assert(ft_strchr(str, '!') == strchr(str, '!'));
+	// Test 4 : Recherche du caractère nul '\0'
+	assert(ft_strchr(str, '\0') == strchr(str, '\0'));
+	// Test 5 : Recherche d'un caractère absent
+	assert(ft_strchr(str, 'z') == strchr(str, 'z'));
+	// Test 6 : Test du cast en unsigned char (ex: dépassement avec int)
+	// 'o' correspond à 111, 111 + 256 = 367 -> (unsigned char)367 == 111 ('o')
+	assert(ft_strchr(str, 'o' + 256) == strchr(str, 'o' + 256));
+	printf("OK\n");
+}
 
 void	test_tolower_uplower(void)
 {
@@ -221,5 +242,6 @@ int	main(void)
 	test_memcmp();
 	test_1();
 	test_tolower_uplower();
+	test_strchr();
 	return (0);
 }

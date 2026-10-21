@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/21 11:05:26 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/21 12:03:50 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/10/21 13:58:16 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t			i;
 	unsigned char	*ptr;
-	unsigned char	*res;
 	unsigned char	c_char;
 
 	i = 0;
@@ -26,7 +25,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		if (ptr[i] == c_char)
 		{
-			return (res = &ptr[i]);
+			return (&ptr[i]);
 		}
 		i++;
 	}
