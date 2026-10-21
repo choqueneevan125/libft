@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/20 14:55:41 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/21 12:02:09 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/10/21 13:24:42 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,14 @@
 #include "libft.h"
 
 void	run_test(const void *s, int c, size_t n, const char *test_name);
+
+void	test_tolower_uplower(void)
+{
+	printf("%c\n", ft_tolower('C'));
+	printf("%c\n", ft_tolower('d'));
+	printf("%c\n", ft_toupper('B'));
+	printf("%c\n", ft_toupper('a'));
+}
 
 void	test_1(void)
 {
@@ -212,5 +220,6 @@ int	main(void)
 	printf("%d\n", ft_atoi("      \n  -5"));
 	test_memcmp();
 	test_1();
+	test_tolower_uplower();
 	return (0);
 }
