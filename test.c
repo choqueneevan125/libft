@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/20 14:55:41 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/20 16:39:06 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/10/21 10:58:20 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,14 @@
 #include <assert.h>
 #include "libft.h"
 
-/*
-Suite de tests unitaires pour les fonctions surlignées en jaune
-*/
+void	test_memcmp(void)
+{
+	printf("%d\n", ft_memcmp("Hello", "Hello", 5));
+	printf("%d\n", ft_memcmp("olleh", "Hello", 5));
+	printf("%d\n", ft_memcmp("test", "test", 3));
+	printf("%d\n", ft_memcmp("test", "123", 3));
+	printf("%d\n", ft_memcmp("", "Hello", 5));
+}
 
 void	test_isalpha(void)
 {
@@ -160,5 +165,6 @@ int	main(void)
 	test_memmove();
 	printf("\n= TOUS LES TESTS ONT RÉUSSI ! ===\n");
 	printf("%d\n", ft_atoi("      \n  -5"));
+	test_memcmp();
 	return (0);
 }
