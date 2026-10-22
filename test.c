@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/20 14:55:41 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/21 15:50:40 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/10/22 08:35:42 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,29 @@ void	test_strchr(void)
 	// Test 6 : Test du cast en unsigned char (ex: dépassement avec int)
 	// 'o' correspond à 111, 111 + 256 = 367 -> (unsigned char)367 == 111 ('o')
 	assert(ft_strchr(str, 'o' + 256) == strchr(str, 'o' + 256));
+	printf("OK\n");
+}
+
+void	test_strrchr(void)
+{
+	printf("[TEST] ft_strrchr... ");
+	char	*str = "Hello, 42LeHavre!";
+
+	// Test 1 : Recherche d'un caractère présent plusieurs fois (doit trouver le dernier 'e')
+	assert(ft_strrchr(str, 'e') == strrchr(str, 'e'));
+	// Test 2 : Recherche du premier caractère s'il est unique
+	assert(ft_strrchr(str, 'H') == strrchr(str, 'H'));
+	// Test 3 : Recherche du dernier caractère avant '\0'
+	assert(ft_strrchr(str, '!') == strrchr(str, '!'));
+	// Test 4 : Recherche du caractère nul '\0'
+	assert(ft_strrchr(str, '\0') == strrchr(str, '\0'));
+	// Test 5 : Recherche d'un caractère absent
+	assert(ft_strrchr(str, 'z') == strrchr(str, 'z'));
+	// Test 6 : Cast en unsigned char ('e' + 256)
+	assert(ft_strrchr(str, 'e' + 256) == strrchr(str, 'e' + 256));
+	// Test 7 : Chaîne vide
+	assert(ft_strrchr("", 'a') == strrchr("", 'a'));
+	assert(ft_strrchr("", '\0') == strrchr("", '\0'));
 	printf("OK\n");
 }
 
@@ -243,5 +266,6 @@ int	main(void)
 	test_1();
 	test_tolower_uplower();
 	test_strchr();
+	test_strrchr();
 	return (0);
 }
