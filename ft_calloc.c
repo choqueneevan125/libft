@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/21 15:12:13 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/21 15:46:34 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/10/22 11:27:38 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	}
 	if (nmemb * size >= INT_MAX)
 	{
-		return (NULL);
+		return (maloc(0));
 	}
 	return (malloc(nmemb * size));
 }
