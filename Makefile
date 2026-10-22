@@ -33,7 +33,7 @@ OBJ = $(SRC_TEMP:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(AR) $@ $^
+	$(AR) $@ $?
 
 %.o : %.c
 	$(CC) $(CFLAGS) -c $< -o $@
