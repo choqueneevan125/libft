@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/19 13:35:22 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/22 09:53:48 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/10/22 11:32:44 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 #endif
