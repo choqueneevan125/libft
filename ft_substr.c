@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/22 14:52:09 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/23 07:38:32 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/10/23 11:17:55 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		dest[i] = s[start + i];
 		i++;
 	}
+	dest[i] = 0;
 	return (dest);
 }
