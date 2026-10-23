@@ -6,12 +6,11 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/23 08:16:09 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/23 11:26:04 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/10/23 11:55:31 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	get_start(char const *s1, char const *set)
 {
@@ -56,9 +55,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*res;
 
 	start = get_start(s1, set);
-	printf("start = %d\n", start);
 	len = get_len(s1, set) - start;
-	printf("len = %ld\n", len);
 	res = ft_substr(s1, start, len);
 	return (res);
 }
