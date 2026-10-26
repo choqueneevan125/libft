@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/26 07:52:05 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/26 08:34:08 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/10/26 13:01:08 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ char	*ft_itoa(int n)
 	int		len;
 	long	nb;
 
-	len = get_len_number(n);
-	res = malloc(sizeof(char) * (len + 1));
 	nb = (long) n;
+	len = get_len_number(nb);
+	res = malloc(sizeof(char) * (len + 1));
 	if (!res)
 		return (NULL);
 	res[len] = 0;
