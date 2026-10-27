@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by [evanchoq]*
+*This project has been created as part of the 42 curriculum by evanchoq*
 
 # Libft - Votre toute première bibliothèque en C
 
