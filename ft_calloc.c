@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/21 15:12:13 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/22 11:28:34 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/10/27 12:01:12 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	if (nmemb == 0 || size == 0)
-	{
+	void	*ptr;
+	size_t	total_size;
+
+	if (nmemb != 0 && size > INT_MAX / nmemb)
 		return (NULL);
-	}
-	if (nmemb * size >= INT_MAX)
-	{
-		return (malloc(0));
-	}
-	return (malloc(nmemb * size));
+	total_size = nmemb * size;
+	ptr = malloc(nmemb * size);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, total_size);
+	return (ptr);
 }

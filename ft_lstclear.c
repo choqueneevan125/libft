@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/27 09:18:10 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/27 09:42:17 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/10/27 10:51:08 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	}
 	temp = NULL;
 }
+
+// temp = addresse de lst->next 00000001
+// lst =
