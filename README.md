@@ -32,7 +32,7 @@ Fonctions additionnelles non présentes dans la libc ou sous une forme différen
 * `ft_striteri` : Applique une fonction à chaque caractère d'une chaîne en le modifiant sur place.
 * `ft_putchar_fd` / `ft_putstr_fd` / `ft_putendl_fd` / `ft_putnbr_fd` : Écrivent respectivement un caractère, une chaîne, une chaîne avec saut de ligne ou un nombre sur un descripteur de fichier (`fd`).
 
-### Partie Bonus - Gestion des listes chaînées
+### Partie 3 - Gestion des listes chaînées
 Utilisation de la structure `t_list` :
 
 ```c
