@@ -95,4 +95,4 @@ Pour utiliser cette bibliothèque dans vos propres programmes C :
 
 ### Usage de l'IA dans ce projet
 Conformément aux directives pédagogiques de l'école 42 :
-* **Usage de l'IA :** Utiliser pour comprendre les sujet et traduire le sujet, mon niveau en anglais est moyen et aussi des aide pour certaine fonction
+* **Usage de l'IA :** Utiliser pour comprendre les sujet et traduire le sujet, mon niveau en anglais est moyen et aussi des aide pour certaine fonction et il m'a aider pour le README.md
