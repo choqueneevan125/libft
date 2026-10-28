@@ -1,6 +1,6 @@
 NAME = libft.a
 
-CC = gcc
+CC = cc
 AR = ar rcs
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
@@ -45,7 +45,9 @@ SRC = ft_isalpha.c \
 	  ft_lstdelone.c \
 	  ft_lstclear.c \
 	  ft_lstiter.c \
-	  ft_lstmap.c
+	  ft_lstmap.c \
+	  ft_calloc.c \
+	  ft_strdup.c
 
 OBJ = $(SRC:.c=.o)
 
