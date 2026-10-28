@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/23 12:56:09 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/23 16:36:32 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/10/28 16:34:55 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int	get_word_len(char const *s, char c)
 	return (start);
 }
 
-static int	count_split(char const *s, char c)
+static int	count_word(char const *s, char c)
 {
 	int	count;
 	int	in_word;
@@ -84,12 +84,12 @@ static char	*extract_word(const char *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**res;
-	int		count;
 	int		i;
 	int		j;
 
-	count = count_split(s, c);
-	res = malloc(sizeof(*res) * (count + 1));
+	res = malloc(sizeof(char *) * (count_word(s, c) + 1));
+	if (!res)
+		return (NULL);
 	i = 0;
 	j = 0;
 	while (s[j])

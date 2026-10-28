@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/21 13:31:19 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/22 08:32:04 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/10/28 16:55:38 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,12 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	size_t			i;
-	unsigned char	c_char;
+	size_t	i;
 
 	i = 0;
-	c_char = c;
-	while (s[i])
-	{
-		if (s[i] == c_char)
-		{
-			return ((char *) & s[i]);
-		}
+	while (s[i] && s[i] != (char) c)
 		i++;
-	}
-	if (s[i] == c)
-	{
+	if (s[i] == (char) c)
 		return ((char *) & s[i]);
-	}
 	return (NULL);
 }
