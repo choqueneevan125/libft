@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/21 10:09:29 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/21 11:54:09 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/10/28 15:35:41 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	ptr_s2 = (unsigned char *) s2;
 	while (i < n)
 	{
-		res = ptr_s1[i] - ptr_s2[i];
+		if (ptr_s1[i] != ptr_s2[i])
+		{
+			return (ptr_s1[i] - ptr_s2[i]);
+		}
 		i++;
 	}
 	return (res);
